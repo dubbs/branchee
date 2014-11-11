@@ -1,0 +1,31 @@
+
+.branchee-menu {
+	position: relative;
+	display: none;
+	overflow: hidden;
+	.branchee-open & {
+		display: block;
+	}
+}
+.branchee-menu-pane {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 100%;
+}
+.branchee-menu-pane-active {
+	position: relative;
+	left: 0;
+}
+.branchee-toggle:before {
+	content: "\2630";
+	.branchee-open & {
+		content: "✖";
+	}
+}
+.branchee-pane-target:after {
+	content: "\203a";
+	.branchee-back & {
+		content: "\2039";
+	}
+}

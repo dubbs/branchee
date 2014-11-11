@@ -1,0 +1,25 @@
+%fa {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.branchee-pane-target:after {
+	@extend %fa;
+	font-size: .7em;
+	content: "\f054";
+	.branchee-back & {
+		content: "\f053";
+	}
+}
+.branchee-toggle:before {
+	@extend %fa;
+	font-size: .8em;
+	content: "\f0c9";
+	.branchee-open & {
+		content: "\f00d";
+	}
+}
