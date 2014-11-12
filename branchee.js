@@ -23,6 +23,9 @@
     PUBLIC
    *********/
   Branchee.prototype.init = function() {
+  	
+  	this.options.onBeforeInit.call(this);
+  	
     this._setOriginalMenu();
     this._createPanes();
     this._setActivePane(this.$panes.last());
@@ -233,7 +236,8 @@
     classOpen:                 'branchee-open',
     classToggle:               'branchee-toggle',
     onLoad: function () {},
-    onCreatePane: function () {}
+    onCreatePane: function () {},
+    onBeforeInit: function () {}
   };
 
 })(this, this.document, this.jQuery);
