@@ -24,7 +24,7 @@
    *********/
   Branchee.prototype.init = function() {
   	
-  	this.options.onBeforeInit.call(this);
+    this.options.onBeforeInit.call(this);
   	
     this._setOriginalMenu();
     this._createPanes();
