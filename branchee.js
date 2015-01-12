@@ -49,13 +49,13 @@
 
     var $activeLinksLI = $activeLinks.closest('li');
 
-    var $activeLinksWithBack = $activeLinksLI.filter('.branchee-back');
+    var $activeLinksWithBack = $activeLinksLI.filter('.'+this.options.classBackLink);
     if ($activeLinksWithBack.length) {
-      return $activeLinksWithBack.closest('.branchee-menu-pane');
+      return $activeLinksWithBack.closest('.'+this.options.classMenuPane);
     }
 
-    if ($activeLinksLI.length === 1) {
-      return $activeLinksLI.closest('.branchee-menu-pane');
+    if ($activeLinksLI.first().length) {
+      return $activeLinksLI.first().closest('.'+this.options.classMenuPane);
     }
   };
 
@@ -136,7 +136,7 @@
       $span.data('$ul', $parentUL);
 
       $parentA.append($span);
-      $backLink = $parentA.wrap('<li class="'+this.options.classBackLink+'"></li>').parent(); 
+      $backLink = $parentA.wrap('<li class="'+this.options.classBackLink+'"></li>').parent();
     }
 
     return $backLink;
