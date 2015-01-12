@@ -97,6 +97,8 @@
   border-color: #5b1aff; }
 .branchee-theme-1 .branchee-back a {
   background: #f3f3f3; }
+.branchee-theme-1 .branchee-menu-item-active {
+  font-weight: bold; }
 
 .branchee-menu-pane {
   -webkit-animation-duration: .35s;

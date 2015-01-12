@@ -43,7 +43,7 @@
 						</li>
 					</ul>
 				</li>
-				<li><a href="#">Health and Fitness</a>
+				<li><a href="#health-fitness">Health and Fitness</a>
 					<ul>
 						<li><a href="#">Exercise</a></li>
 						<li><a href="#">Life Extension</a></li>
@@ -72,6 +72,10 @@
 		  $pane.find('a').each(function (index) {
 			$(this).addClass('branchee-section branchee-section-'+(index+1));
 		  });
+		  var $activePane = this.getActivePaneByPath('#health-fitness');
+		  if ($activePane) {
+		    this.setActivePane($activePane);
+		  }
 		},
 		onCreatePane: function ($pane, position) {
 		  var $backLink = this.getBackLink($pane);

@@ -1,6 +1,6 @@
 /**
  * branchee.js
- * version: 1.0.0
+ * version: 1.0.1
  * author: dubbs
  * license: MIT
  */
@@ -23,13 +23,10 @@
     PUBLIC
    *********/
   Branchee.prototype.init = function() {
-  	
     this.options.onBeforeInit.call(this);
-  	
     this._setOriginalMenu();
     this._createPanes();
     this._setActivePane(this.$panes.last());
-
     this.options.onLoad.call(this);
   };
 
@@ -46,6 +43,25 @@
     return this.$panes.filter('.'+this.options.classMenuPaneActive);
   };
 
+  Branchee.prototype.getActivePaneByPath = function(path) {
+    var $activeLinks = this.$menu.find('a[href="'+path+'"]');
+    $activeLinks.addClass(this.options.classMenuItemActive);
+
+    var $activeLinksLI = $activeLinks.closest('li');
+
+    var $activeLinksWithBack = $activeLinksLI.filter('.branchee-back');
+    if ($activeLinksWithBack.length) {
+      return $activeLinksWithBack.closest('.branchee-menu-pane');
+    }
+
+    if ($activeLinksLI.length === 1) {
+      return $activeLinksLI.closest('.branchee-menu-pane');
+    }
+  };
+
+  Branchee.prototype.setActivePane = function($paneTarget) {
+    this._setActivePane($paneTarget);
+  };
 
   /********
     PRIVATE
@@ -224,6 +240,7 @@
   };
 
   $.fn.branchee.defaults = {
+    classMenuItemActive:       'branchee-menu-item-active',
     classMenuPaneActive:       'branchee-menu-pane-active',
     classMenuPane:             'branchee-menu-pane',
     classMenu:                 'branchee-menu',
