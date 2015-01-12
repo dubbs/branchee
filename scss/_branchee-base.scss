@@ -29,3 +29,9 @@
 		content: "\2039";
 	}
 }
+.branchee-footer {
+	display: none;
+	.branchee-open & {
+		display: block;
+	}
+}

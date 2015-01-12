@@ -32,6 +32,11 @@
   .branchee-back .branchee-pane-target:after {
     content: "\2039"; }
 
+.branchee-footer {
+  display: none; }
+  .branchee-open .branchee-footer {
+    display: block; }
+
 .branchee-theme-base .branchee-pane-target, .branchee-theme-1 .branchee-pane-target,
 .branchee-theme-base .branchee-toggle:before,
 .branchee-theme-1 .branchee-toggle:before {
