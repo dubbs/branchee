@@ -5,6 +5,7 @@
 		<title></title>
 		<link rel="stylesheet" href="scss/branchee.css" />
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href='//fonts.googleapis.com/css?family=Open+Sans:400,700' />
 		<link rel="stylesheet" href="example.css" />
 	</head>
 	<body>
@@ -12,7 +13,7 @@
 		<a href="#menu" class="branchee-toggle">Menu</a>
 		<div id="menu" class="branchee-menu">
 			<ul>
-				<li><a href="#">Culture and the Arts</a>
+				<li><a href="#culture-and-the-arts">Culture and the Arts</a>
 					<ul>
 						<li><a href="#">The Arts</a>
 							<ul>
@@ -43,7 +44,7 @@
 						</li>
 					</ul>
 				</li>
-				<li><a href="#health-fitness">Health and Fitness</a>
+				<li><a href="#">Health and Fitness</a>
 					<ul>
 						<li><a href="#">Exercise</a></li>
 						<li><a href="#">Life Extension</a></li>
@@ -72,10 +73,10 @@
 		  $pane.find('a').each(function (index) {
 			$(this).addClass('branchee-section branchee-section-'+(index+1));
 		  });
-		  var $activePane = this.getActivePaneByPath('#health-fitness');
-		  if ($activePane) {
-		    this.setActivePane($activePane);
-		  }
+		  // var $activePane = this.getActivePaneByPath('#culture-and-the-arts');
+		  // if ($activePane) {
+		  //   this.setActivePane($activePane);
+		  // }
 		},
 		onCreatePane: function ($pane, position) {
 		  var $backLink = this.getBackLink($pane);
