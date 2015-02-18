@@ -17,6 +17,7 @@
 
     this.$el.on('click', '.'+this.options.classMenuPaneTarget, $.proxy(this._handleClick, this));
     this.$el.on('click', '.'+this.options.classToggle, $.proxy(this._handleToggle, this));
+    $(document).on('click', '.'+this.options.classToggleExt, $.proxy(this._handleToggle, this));
   }
 
   /********
@@ -252,6 +253,7 @@
     classTransitionEnterLeft:  'branchee-transition-enterleft',
     classOpen:                 'branchee-open',
     classToggle:               'branchee-toggle',
+    classToggleExt:            'branchee-toggle-ext',
     onLoad: function () {},
     onCreatePane: function () {},
     onBeforeInit: function () {}
