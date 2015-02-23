@@ -206,6 +206,7 @@
   Branchee.prototype._handleToggle = function(e) {
     e.preventDefault();
     this.toggleOpen();
+    this.options.onToggle.call(this);
   };
 
   Branchee.prototype._clearTransitions = function() {
@@ -256,7 +257,8 @@
     classToggleExt:            'branchee-toggle-ext',
     onLoad: function () {},
     onCreatePane: function () {},
-    onBeforeInit: function () {}
+    onBeforeInit: function () {},
+    onToggle: function () {}
   };
 
 })(this, this.document, this.jQuery);
