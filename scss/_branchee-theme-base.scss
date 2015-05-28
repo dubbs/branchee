@@ -1,15 +1,5 @@
 
-
-%touch-target {
-	background: #f3f3f3;
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	line-height: 1;
-	text-align: center;
-}
-
-.branchee-theme-base {
+@mixin branchee-theme-base() {
 	ul {
 		margin: 0;
 		padding: 0;
@@ -18,7 +8,16 @@
 		list-style: none;
 	}
 	.branchee-pane-target,
-	.branchee-toggle:before {
-		@extend %touch-target;
+	&.branchee-toggle-menu span {
+		background: #f3f3f3;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		line-height: 1;
+		text-align: center;
 	}
+}
+
+.branchee-theme-base {
+	@include branchee-theme-base;
 }

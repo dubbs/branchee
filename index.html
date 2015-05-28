@@ -7,83 +7,209 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href='//fonts.googleapis.com/css?family=Open+Sans:400,700' />
 		<link rel="stylesheet" href="example.css" />
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="branchee.js"></script>
 	</head>
 	<body>
-	<div id="container" class="branchee-theme-1">
-		<a href="#menu" class="branchee-toggle">Menu</a>
-		<div id="menu" class="branchee-menu">
-			<ul>
-				<li><a href="#culture-and-the-arts">Culture and the Arts</a>
+		
+		<div id="example-1">
+			<div>Base Theme</div>
+			<div><a class="branchee-toggle-menu branchee-theme-base" href="#menu-1">Toggle</a></div>
+			<div id="menu-1" class="branchee-theme-base">
+				<div class="branchee-menu">
 					<ul>
-						<li><a href="#">The Arts</a>
+						<li><a class="branchee-menu-item-active" href="#">Culture and the Arts</a>
 							<ul>
-								<li><a href="#">Literature</a></li>
-								<li><a href="#">Visual Arts</a></li>
-								<li><a href="#">Performing Arts</a></li>
+								<li><a href="#">The Arts</a>
+									<ul>
+										<li><a href="#">Literature</a></li>
+										<li><a href="#">Visual Arts</a></li>
+										<li><a href="#">Performing Arts</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Gastronomy</a>
+									<ul>
+										<li><a href="#">Food Preparation</a></li>
+										<li><a href="#">Food &amp; Drink</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Recreation &amp; Entertainment</a>
+									<ul>
+										<li><a href="#">Festivals</a></li>
+										<li><a href="#">Fiction</a></li>
+										<li><a href="#">Games</a></li>
+										<li><a href="#">Sports</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Humanities</a>
+									<ul>
+										<li><a href="#">Area Studies</a></li>
+										<li><a href="#">Classical Studies</a></li>
+									</ul>
+								</li>
 							</ul>
 						</li>
-						<li><a href="#">Gastronomy</a>
+						<li><a href="#">Health and Fitness</a>
 							<ul>
-								<li><a href="#">Food Preparation</a></li>
-								<li><a href="#">Food &amp; Drink</a></li>
+								<li><a href="#">Exercise</a></li>
+								<li><a href="#">Life Extension</a></li>
+								<li><a href="#">Healthcare Science</a></li>
+								<li><a href="#">Medicine</a></li>
+								<li><a href="#">Nutrition</a></li>
+								<li><a href="#">Psychiatry</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Recreation &amp; Entertainment</a>
-							<ul>
-								<li><a href="#">Festivals</a></li>
-								<li><a href="#">Fiction</a></li>
-								<li><a href="#">Games</a></li>
-								<li><a href="#">Sports</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Humanities</a>
-							<ul>
-								<li><a href="#">Area Studies</a></li>
-								<li><a href="#">Classical Studies</a></li>
-							</ul>
-						</li>
+						<li><a href="#">Mathematics and logic</a></li>
+						<li><a href="#">Natural and Physical Sciences</a></li>
+						<li><a href="#">People and Self</a></li>
+						<li><a href="#">Philosophy and Thinking</a></li>
+						<li><a href="#">Religion and Belief Systems</a></li>
+						<li><a href="#">Society and Social Sciences</a></li>
+						<li><a href="#">Technology and Applied Sciences</a></li>
 					</ul>
-				</li>
-				<li><a href="#">Health and Fitness</a>
-					<ul>
-						<li><a href="#">Exercise</a></li>
-						<li><a href="#">Life Extension</a></li>
-						<li><a href="#">Healthcare Science</a></li>
-						<li><a href="#">Medicine</a></li>
-						<li><a href="#">Nutrition</a></li>
-						<li><a href="#">Psychiatry</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Mathematics and logic</a></li>
-				<li><a href="#">Natural and Physical Sciences</a></li>
-				<li><a href="#">People and Self</a></li>
-				<li><a href="#">Philosophy and Thinking</a></li>
-				<li><a href="#">Religion and Belief Systems</a></li>
-				<li><a href="#">Society and Social Sciences</a></li>
-				<li><a href="#">Technology and Applied Sciences</a></li>
-			</ul>
+				</div>
+			</div>
+			<script>
+			$('#menu-1').branchee({
+				onAfterInit: function () {
+					this.toggleOpen();
+				}
+			});
+			</script>
 		</div>
-		<footer class="branchee-footer"><!-- footer content here --></footer>
-	</div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="branchee.js"></script>
-	<script>
-	$('#container').branchee({
-		onLoad: function () {
-		  var $pane = this.getActivePane();
-		  $pane.find('a').each(function (index) {
-			$(this).addClass('branchee-section branchee-section-'+(index+1));
-		  });
-		  // var $activePane = this.getActivePaneByPath('#culture-and-the-arts');
-		  // if ($activePane) {
-		  //   this.setActivePane($activePane);
-		  // }
-		},
-		onCreatePane: function ($pane, position) {
-		  var $backLink = this.getBackLink($pane);
-		  $backLink.addClass('branchee-section branchee-section-'+position[0]);
-		}
-	});
-	</script>
+
+		<div id="example-2">
+			<div>Minimal Theme</div>
+			<div><a class="branchee-toggle-menu branchee-theme-minimal" href="#menu-2">Toggle</a></div>
+			<div id="menu-2" class="branchee-theme-minimal">
+				<div class="branchee-menu">
+					<ul>
+						<li><a class="branchee-menu-item-active" href="#">Culture and the Arts</a>
+							<ul>
+								<li><a href="#">The Arts</a>
+									<ul>
+										<li><a href="#">Literature</a></li>
+										<li><a href="#">Visual Arts</a></li>
+										<li><a href="#">Performing Arts</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Gastronomy</a>
+									<ul>
+										<li><a href="#">Food Preparation</a></li>
+										<li><a href="#">Food &amp; Drink</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Recreation &amp; Entertainment</a>
+									<ul>
+										<li><a href="#">Festivals</a></li>
+										<li><a href="#">Fiction</a></li>
+										<li><a href="#">Games</a></li>
+										<li><a href="#">Sports</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Humanities</a>
+									<ul>
+										<li><a href="#">Area Studies</a></li>
+										<li><a href="#">Classical Studies</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">Health and Fitness</a>
+							<ul>
+								<li><a href="#">Exercise</a></li>
+								<li><a href="#">Life Extension</a></li>
+								<li><a href="#">Healthcare Science</a></li>
+								<li><a href="#">Medicine</a></li>
+								<li><a href="#">Nutrition</a></li>
+								<li><a href="#">Psychiatry</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Mathematics and logic</a></li>
+						<li><a href="#">Natural and Physical Sciences</a></li>
+						<li><a href="#">People and Self</a></li>
+						<li><a href="#">Philosophy and Thinking</a></li>
+						<li><a href="#">Religion and Belief Systems</a></li>
+						<li><a href="#">Society and Social Sciences</a></li>
+						<li><a href="#">Technology and Applied Sciences</a></li>
+					</ul>
+				</div>
+			</div>
+			<script>
+			$('#menu-2').branchee({
+				onAfterInit: function () {
+					this.toggleOpen();
+				}
+			});
+			</script>
+		</div>
+
+
+		<div id="example-3">
+			<div>Rainbow Theme</div>
+			<div><a class="branchee-toggle-menu branchee-theme-rainbow" href="#menu-3">Toggle</a></div>
+			<div id="menu-3" class="branchee-theme-rainbow">
+				<div class="branchee-menu">
+					<ul>
+						<li><a href="#">Culture and the Arts</a>
+							<ul>
+								<li><a href="#">The Arts</a>
+									<ul>
+										<li><a href="#">Literature</a></li>
+										<li><a href="#">Visual Arts</a></li>
+										<li><a href="#">Performing Arts</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Gastronomy</a>
+									<ul>
+										<li><a href="#">Food Preparation</a></li>
+										<li><a href="#">Food &amp; Drink</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Recreation &amp; Entertainment</a>
+									<ul>
+										<li><a href="#">Festivals</a></li>
+										<li><a href="#">Fiction</a></li>
+										<li><a href="#">Games</a></li>
+										<li><a href="#">Sports</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Humanities</a>
+									<ul>
+										<li><a href="#">Area Studies</a></li>
+										<li><a href="#">Classical Studies</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">Health and Fitness</a>
+							<ul>
+								<li><a href="#">Exercise</a></li>
+								<li><a href="#">Life Extension</a></li>
+								<li><a href="#">Healthcare Science</a></li>
+								<li><a href="#">Medicine</a></li>
+								<li><a href="#">Nutrition</a></li>
+								<li><a href="#">Psychiatry</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Mathematics and logic</a></li>
+						<li><a href="#">Natural and Physical Sciences</a></li>
+						<li><a href="#">People and Self</a></li>
+						<li><a href="#">Philosophy and Thinking</a></li>
+						<li><a href="#">Religion and Belief Systems</a></li>
+						<li><a href="#">Society and Social Sciences</a></li>
+						<li><a href="#">Technology and Applied Sciences</a></li>
+					</ul>
+				</div>
+			</div>
+			<script>
+			$('#menu-3').branchee({
+				onAfterInit: function () {
+					this.toggleOpen();
+				}
+			});
+			</script>
+		</div>
+
 	</body>
 </html>

@@ -1,0 +1,67 @@
+
+@mixin pane-target {
+	background: #f3f3f3;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: auto;
+	height: auto;
+	width: 2em;	
+	line-height: 1.7;
+}
+
+@mixin branchee-theme-minimal {
+
+	@include branchee-theme-base;
+
+	.branchee-menu-pane {
+		li {
+			border-top: 1px solid #f3f3f3;
+		}
+		a {
+			display: block;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			&:hover {
+				text-decoration: underline;
+			}
+			padding: .3em;
+			padding-right: 2.3em;
+		}
+	}
+
+	&.branchee-toggle-menu {
+		position: relative;
+		display: block;
+		padding: .3em .3em .3em 2.4em;
+		text-decoration: none;
+  		color: black;
+  		&:hover {
+  			text-decoration: underline;
+  		}
+		span {
+			@include pane-target;
+			left: 0;
+		}
+	}
+
+	.branchee-pane-target {
+		@include pane-target;
+		right: 0;
+	}
+
+	.branchee-back a {
+		background: #f3f3f3;
+	}
+
+	.branchee-menu-item-active {
+		font-weight: bold;
+	}
+
+}
+
+.branchee-theme-minimal {
+	@include branchee-theme-minimal;
+}
+

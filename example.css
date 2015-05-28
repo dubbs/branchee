@@ -2,7 +2,13 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 #container {
-  width: 17em;
-  font-size: 24px;
-  margin: 1em auto;
+	width: 17em;
+	font-size: 24px;
+	margin: 1em auto;
+}
+#example-1,
+#example-2,
+#example-3 {
+	float: left;
+	width: 300px;
 }

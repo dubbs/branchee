@@ -15,11 +15,11 @@
 		content: "\f053";
 	}
 }
-.branchee-toggle:before {
+.branchee-toggle-menu span:before {
 	@extend %fa;
 	font-size: .8em;
 	content: "\f0c9";
-	.branchee-open & {
-		content: "\f00d";
-	}
+}
+.branchee-open.branchee-toggle-menu span:before {
+	content: "\f00d";
 }

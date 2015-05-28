@@ -1,7 +1,7 @@
 {
   "name": "branchee",
   "main": "branchee.js",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "homepage": "https://github.com/dubbs/branchee",
   "authors": [
     "Kevin Warrington <kevin.warrington@gmail.com>"

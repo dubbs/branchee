@@ -7,6 +7,7 @@
 		display: block;
 	}
 }
+
 .branchee-menu-pane {
 	position: absolute;
 	top: 0;
@@ -17,18 +18,21 @@
 	position: relative;
 	left: 0;
 }
-.branchee-toggle:before {
+
+.branchee-toggle-menu span:before {
 	content: "\2630";
-	.branchee-open & {
-		content: "✖";
-	}
 }
+.branchee-open.branchee-toggle-menu  span:before {
+	content: "✖";
+}
+
 .branchee-pane-target:after {
 	content: "\203a";
-	.branchee-back & {
-		content: "\2039";
-	}
 }
+.branchee-back .branchee-pane-target:after {
+	content: "\2039";
+}
+
 .branchee-footer {
 	display: none;
 	.branchee-open & {

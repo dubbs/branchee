@@ -5,4 +5,4 @@ Branchee is a lightweight mobile navigation plugin with built in transitions.  T
 
 To compile the stylesheets:
 
-	sass scss/branchee.scss:scss/branchee.css
+	sass --watch scss/branchee.scss:scss/branchee.css
