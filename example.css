@@ -8,7 +8,8 @@ body {
 }
 #example-1,
 #example-2,
-#example-3 {
+#example-3,
+#example-4 {
 	float: left;
 	width: 300px;
 }

@@ -1,0 +1,66 @@
+
+.branchee-theme-dark-rainbow {
+
+	@include branchee-theme-minimal;
+
+	.branchee-menu-pane a {
+		background: #3E3E40;
+		color: white;
+	}
+	.branchee-pane-target {
+		background: none;
+	}
+
+	li.branchee-section--1 .branchee-pane-target,
+	.branchee-section--1 .branchee-back a,
+	.branchee-section--1 .branchee-back span {
+		background-color: #7D4296;
+	}
+	li.branchee-section--2 .branchee-pane-target,
+	.branchee-section--2 .branchee-back a,
+	.branchee-section--2 .branchee-back span {
+		background-color: #F38230;
+	}
+	li.branchee-section--3 .branchee-pane-target,
+	.branchee-section--3 .branchee-back a,
+	.branchee-section--3 .branchee-back span {
+		background-color: #E9178B;
+	}
+	li.branchee-section--4 .branchee-pane-target,
+	.branchee-section--4 .branchee-back a,
+	.branchee-section--4 .branchee-back span {
+		background-color: #6EB846;
+	}
+	li.branchee-section--5 .branchee-pane-target,
+	.branchee-section--5 .branchee-back a,
+	.branchee-section--5 .branchee-back span {
+		background-color: #4E92DF;
+	}
+
+
+
+
+
+
+	// .branchee-section a {border-left:5px solid transparent;}
+	// .branchee-section--1 { > a, .branchee-back > a {border-color:hsla(1, 94%, 54%, 1)} }
+	// .branchee-section--2 { > a, .branchee-back > a {border-color:hsla(41, 94%, 54%, 1)} }
+	// .branchee-section--3 { > a, .branchee-back > a {border-color:hsla(81, 94%, 54%, 1)} }
+	// .branchee-section--4 { > a, .branchee-back > a {border-color:hsla(121, 94%, 54%, 1)} }
+	// .branchee-section--5 { > a, .branchee-back > a {border-color:hsla(161, 94%, 54%, 1)} }
+	// .branchee-section--6 { > a, .branchee-back > a {border-color:hsla(201, 94%, 54%, 1)} }
+	// .branchee-section--7 { > a, .branchee-back > a {border-color:hsla(241, 94%, 54%, 1)} }
+	// .branchee-section--8 { > a, .branchee-back > a {border-color:hsla(281, 94%, 54%, 1)} }
+	// .branchee-section--9 { > a, .branchee-back > a {border-color:hsla(321, 94%, 54%, 1)} }
+
+	// .branchee-section--1 .branchee-back { a, span {background-color:hsla(1, 89%, 93%, 1)} }
+	// .branchee-section--2 .branchee-back { a, span {background-color:hsla(41, 89%, 93%, 1)} }
+	// .branchee-section--3 .branchee-back { a, span {background-color:hsla(81, 89%, 93%, 1)} }
+	// .branchee-section--4 .branchee-back { a, span {background-color:hsla(121, 89%, 93%, 1)} }
+	// .branchee-section--5 .branchee-back { a, span {background-color:hsla(161, 89%, 93%, 1)} }
+	// .branchee-section--6 .branchee-back { a, span {background-color:hsla(201, 89%, 93%, 1)} }
+	// .branchee-section--7 .branchee-back { a, span {background-color:hsla(241, 89%, 93%, 1)} }
+	// .branchee-section--8 .branchee-back { a, span {background-color:hsla(281, 89%, 93%, 1)} }
+	// .branchee-section--9 .branchee-back { a, span {background-color:hsla(321, 89%, 93%, 1)} }
+
+}

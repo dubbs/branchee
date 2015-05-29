@@ -202,6 +202,87 @@
 .branchee-theme-rainbow .branchee-section--9 .branchee-back a, .branchee-theme-rainbow .branchee-section--9 .branchee-back span {
   background-color: #fdddf2; }
 
+.branchee-theme-dark-rainbow ul {
+  margin: 0;
+  padding: 0; }
+.branchee-theme-dark-rainbow li {
+  list-style: none; }
+.branchee-theme-dark-rainbow .branchee-pane-target, .branchee-theme-dark-rainbow.branchee-toggle-menu span {
+  background: #f3f3f3;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-align: center; }
+.branchee-theme-dark-rainbow .branchee-menu-pane li {
+  border-top: 1px solid #f3f3f3; }
+.branchee-theme-dark-rainbow .branchee-menu-pane a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: .3em;
+  padding-right: 2.3em; }
+  .branchee-theme-dark-rainbow .branchee-menu-pane a:hover {
+    text-decoration: underline; }
+.branchee-theme-dark-rainbow.branchee-toggle-menu {
+  position: relative;
+  display: block;
+  padding: .3em .3em .3em 2.4em;
+  text-decoration: none;
+  color: black; }
+  .branchee-theme-dark-rainbow.branchee-toggle-menu:hover {
+    text-decoration: underline; }
+  .branchee-theme-dark-rainbow.branchee-toggle-menu span {
+    background: #f3f3f3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    height: auto;
+    width: 2em;
+    line-height: 1.7;
+    left: 0; }
+.branchee-theme-dark-rainbow .branchee-pane-target {
+  background: #f3f3f3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  height: auto;
+  width: 2em;
+  line-height: 1.7;
+  right: 0; }
+.branchee-theme-dark-rainbow .branchee-back a {
+  background: #f3f3f3; }
+.branchee-theme-dark-rainbow .branchee-menu-item-active {
+  font-weight: bold; }
+.branchee-theme-dark-rainbow .branchee-menu-pane a {
+  background: #3E3E40;
+  color: white; }
+.branchee-theme-dark-rainbow .branchee-pane-target {
+  background: none; }
+.branchee-theme-dark-rainbow li.branchee-section--1 .branchee-pane-target,
+.branchee-theme-dark-rainbow .branchee-section--1 .branchee-back a,
+.branchee-theme-dark-rainbow .branchee-section--1 .branchee-back span {
+  background-color: #7D4296; }
+.branchee-theme-dark-rainbow li.branchee-section--2 .branchee-pane-target,
+.branchee-theme-dark-rainbow .branchee-section--2 .branchee-back a,
+.branchee-theme-dark-rainbow .branchee-section--2 .branchee-back span {
+  background-color: #F38230; }
+.branchee-theme-dark-rainbow li.branchee-section--3 .branchee-pane-target,
+.branchee-theme-dark-rainbow .branchee-section--3 .branchee-back a,
+.branchee-theme-dark-rainbow .branchee-section--3 .branchee-back span {
+  background-color: #E9178B; }
+.branchee-theme-dark-rainbow li.branchee-section--4 .branchee-pane-target,
+.branchee-theme-dark-rainbow .branchee-section--4 .branchee-back a,
+.branchee-theme-dark-rainbow .branchee-section--4 .branchee-back span {
+  background-color: #6EB846; }
+.branchee-theme-dark-rainbow li.branchee-section--5 .branchee-pane-target,
+.branchee-theme-dark-rainbow .branchee-section--5 .branchee-back a,
+.branchee-theme-dark-rainbow .branchee-section--5 .branchee-back span {
+  background-color: #4E92DF; }
+
 .branchee-menu-pane {
   -webkit-animation-duration: .35s;
   -webkit-animation-timing-function: ease-in-out;
