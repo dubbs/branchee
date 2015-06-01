@@ -1,0 +1,38 @@
+{
+  "name": "branchee",
+  "version": "1.1.0",
+  "description": "Branchee is a lightweight mobile navigation plugin with built in transitions",
+  "main": "src/branchee.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compress": "$(npm bin)/gulp compress"
+  },
+  "pre-commit": [
+    "compress"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dubbs/branchee.git"
+  },
+  "keywords": [
+    "jquery",
+    "mobile",
+    "menu",
+    "plugin",
+    "transitions"
+  ],
+  "author": "Kevin Warrington <kevin.warrington@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dubbs/branchee/issues"
+  },
+  "homepage": "https://github.com/dubbs/branchee",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "gulp": "^3.8.11",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "jquery": "^2.1.4",
+    "pre-commit": "^1.0.7"
+  }
+}
