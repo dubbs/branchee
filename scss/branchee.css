@@ -283,6 +283,81 @@
 .branchee-theme-dark-rainbow .branchee-section--5 .branchee-back span {
   background-color: #4E92DF; }
 
+.branchee-theme-deep-blue ul {
+  margin: 0;
+  padding: 0; }
+.branchee-theme-deep-blue li {
+  list-style: none; }
+.branchee-theme-deep-blue .branchee-pane-target, .branchee-theme-deep-blue.branchee-toggle-menu span {
+  background: #f3f3f3;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-align: center; }
+.branchee-theme-deep-blue .branchee-menu-pane li {
+  border-top: 1px solid #f3f3f3; }
+.branchee-theme-deep-blue .branchee-menu-pane a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: .3em;
+  padding-right: 2.3em; }
+  .branchee-theme-deep-blue .branchee-menu-pane a:hover {
+    text-decoration: underline; }
+.branchee-theme-deep-blue.branchee-toggle-menu {
+  position: relative;
+  display: block;
+  padding: .3em .3em .3em 2.4em;
+  text-decoration: none;
+  color: black; }
+  .branchee-theme-deep-blue.branchee-toggle-menu:hover {
+    text-decoration: underline; }
+  .branchee-theme-deep-blue.branchee-toggle-menu span {
+    background: #f3f3f3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    height: auto;
+    width: 2em;
+    line-height: 1.7;
+    left: 0; }
+.branchee-theme-deep-blue .branchee-pane-target {
+  background: #f3f3f3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  height: auto;
+  width: 2em;
+  line-height: 1.7;
+  right: 0; }
+.branchee-theme-deep-blue .branchee-back a {
+  background: #f3f3f3; }
+.branchee-theme-deep-blue .branchee-menu-item-active {
+  font-weight: bold; }
+.branchee-theme-deep-blue.branchee-toggle-menu {
+  background-color: #444;
+  color: white;
+  padding-left: 1.75em; }
+  .branchee-theme-deep-blue.branchee-toggle-menu.branchee-open {
+    background-color: #007BA3; }
+  .branchee-theme-deep-blue.branchee-toggle-menu span {
+    background: none;
+    color: white;
+    line-height: 1.8; }
+.branchee-theme-deep-blue .branchee-menu-pane .branchee-back a {
+  background-color: #444444; }
+.branchee-theme-deep-blue .branchee-menu-pane a {
+  background: #007BA3;
+  color: white; }
+  .branchee-theme-deep-blue .branchee-menu-pane a.branchee-menu-item-active {
+    background-color: #015B7D; }
+.branchee-theme-deep-blue .branchee-pane-target {
+  background: none; }
+
 .branchee-menu-pane {
   -webkit-animation-duration: .35s;
   -webkit-animation-timing-function: ease-in-out;

@@ -1,0 +1,39 @@
+
+.branchee-theme-deep-blue {
+
+	@include branchee-theme-minimal;
+
+	&.branchee-toggle-menu {
+		background-color: #444;
+		&.branchee-open {
+			background-color: #007BA3;
+		}
+		color: white;
+		padding-left: 1.75em;
+		span {
+			background: none;
+			color: white;
+			line-height: 1.8;
+		}
+	}
+
+	.branchee-menu-pane {
+		.branchee-back a {
+			background-color: #444444;
+		}
+		a {
+			background: #007BA3;
+			color: white;
+			&.branchee-menu-item-active {
+				background-color: #015B7D;
+			}
+		}
+	}
+
+	.branchee-pane-target {
+		background: none;
+	}
+
+
+
+}

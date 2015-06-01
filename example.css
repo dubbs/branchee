@@ -9,7 +9,12 @@ body {
 #example-1,
 #example-2,
 #example-3,
-#example-4 {
+#example-4, 
+#example-5 {
 	float: left;
 	width: 300px;
+}
+
+#example-5 {
+	clear: left;
 }
