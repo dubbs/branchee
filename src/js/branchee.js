@@ -51,7 +51,7 @@
 
     this._clearTransitions();
 
-    this.options.onAfterToggle.call(this);
+    this.options.onAfterToggle.call(this, $toggle);
   };
 
   Branchee.prototype.getActivePane = function() {
@@ -97,7 +97,7 @@
   Branchee.prototype._addMenuToggleTarget = function () {
     var id = this.$el.attr('id');
     var $toggle = $('.branchee-toggle-menu[href="#'+id+'"]');
-    $toggle.prepend('<span></span>');
+    $toggle.prepend('<span class="branchee-toggle-menu-icon"></span>');
   };
 
   Branchee.prototype._addPaneTargets = function () {
@@ -179,7 +179,7 @@
   Branchee.prototype._handleToggle = function(e) {
     e.preventDefault();
 
-    if (this.$el.attr('id') === $(e.target).attr('href').substring(1)) {
+    if (this.$el.attr('id') === $(e.currentTarget).attr('href').substring(1)) {
       this.toggleOpen();
     }
   };
