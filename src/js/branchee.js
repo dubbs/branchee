@@ -1,6 +1,6 @@
 /**
  * branchee.js
- * version: 1.1.2
+ * version: 1.1.4
  * author: dubbs
  * license: MIT
  */

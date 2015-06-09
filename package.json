@@ -1,14 +1,17 @@
 {
   "name": "branchee",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "Branchee is a lightweight mobile navigation plugin with built in transitions",
   "main": "src/branchee.js",
   "scripts": {
     "postinstall": "$(npm bin)/bower install",
-    "gulp-jsmin": "$(npm bin)/gulp jsmin"
+    "min-js": "$(npm bin)/uglifyjs --compress --mangle --output dist/branchee.min.js -- src/js/branchee.js",
+    "min-css": "$(npm bin)/node-sass --output-style compressed src/scss/branchee.scss --output dist && cp -a dist/branchee.css dist/branchee.min.css",
+    "watch-scss": "$(npm bin)/node-sass --recursive --watch --output-style expanded src/scss/branchee.scss --output src/scss"
   },
   "pre-commit": [
-    "gulp-jsmin"
+    "min-js",
+    "min-css"
   ],
   "repository": {
     "type": "git",
@@ -30,9 +33,9 @@
   "devDependencies": {
     "bower": "^1.4.1",
     "gulp": "^3.8.11",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.2.0",
     "jquery": "^2.1.4",
-    "pre-commit": "^1.0.7"
+    "node-sass": "^3.1.2",
+    "pre-commit": "^1.0.7",
+    "uglify-js": "^2.4.23"
   }
 }
