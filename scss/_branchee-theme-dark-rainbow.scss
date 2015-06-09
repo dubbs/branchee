@@ -3,38 +3,66 @@
 
 	@include branchee-theme-minimal;
 
+	$section-color--1: #7D4296;
+	$section-color--2: #F38230;
+	$section-color--3: #E9178B;
+	$section-color--4: #6EB846;
+	$section-color--5: #4E92DF;
+	
+	&.branchee-toggle-menu {
+		span {
+			background: #0081BF;
+			color: white;
+		}
+		&.branchee-open span {
+			background-color: #3E3E40;
+		}
+	}
 	.branchee-menu-pane a {
-		background: #3E3E40;
-		color: white;
+		background-color: #BBBBBD;
 	}
 	.branchee-pane-target {
 		background: none;
 	}
+	ul.branchee-section li {
+		border-top-color: #3E3E40;
+	}
+	li.branchee-section a,
+	a.branchee-menu-item-active {
+		background-color: #3E3E40;
+		font-weight: normal;
+		color: white;
+	}
 
-	li.branchee-section--1 .branchee-pane-target,
-	.branchee-section--1 .branchee-back a,
-	.branchee-section--1 .branchee-back span {
-		background-color: #7D4296;
+	.branchee-menu-pane li.branchee-section--1 .branchee-pane-target,
+	.branchee-menu-pane ul.branchee-section--1 .branchee-back a,
+	.branchee-menu-pane ul.branchee-section--1 .branchee-back span {
+		background-color: $section-color--1;
+		color: white;
 	}
-	li.branchee-section--2 .branchee-pane-target,
-	.branchee-section--2 .branchee-back a,
-	.branchee-section--2 .branchee-back span {
-		background-color: #F38230;
+	.branchee-menu-pane li.branchee-section--2 .branchee-pane-target,
+	.branchee-menu-pane ul.branchee-section--2 .branchee-back a,
+	.branchee-menu-pane ul.branchee-section--2 .branchee-back span {
+		background-color: $section-color--2;
+		color: white;
 	}
-	li.branchee-section--3 .branchee-pane-target,
-	.branchee-section--3 .branchee-back a,
-	.branchee-section--3 .branchee-back span {
-		background-color: #E9178B;
+	.branchee-menu-pane li.branchee-section--3 .branchee-pane-target,
+	.branchee-menu-pane ul.branchee-section--3 .branchee-back a,
+	.branchee-menu-pane ul.branchee-section--3 .branchee-back span {
+		background-color: $section-color--3;
+		color: white;
 	}
-	li.branchee-section--4 .branchee-pane-target,
-	.branchee-section--4 .branchee-back a,
-	.branchee-section--4 .branchee-back span {
-		background-color: #6EB846;
+	.branchee-menu-pane li.branchee-section--4 .branchee-pane-target,
+	.branchee-menu-pane ul.branchee-section--4 .branchee-back a,
+	.branchee-menu-pane ul.branchee-section--4 .branchee-back span {
+		background-color: $section-color--4;
+		color: white;
 	}
-	li.branchee-section--5 .branchee-pane-target,
-	.branchee-section--5 .branchee-back a,
-	.branchee-section--5 .branchee-back span {
-		background-color: #4E92DF;
+	.branchee-menu-pane li.branchee-section--5 .branchee-pane-target,
+	.branchee-menu-pane ul.branchee-section--5 .branchee-back a,
+	.branchee-menu-pane ul.branchee-section--5 .branchee-back span {
+		background-color: $section-color--5;
+		color: white;
 	}
 
 }

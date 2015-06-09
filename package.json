@@ -4,11 +4,11 @@
   "description": "Branchee is a lightweight mobile navigation plugin with built in transitions",
   "main": "src/branchee.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compress": "$(npm bin)/gulp compress"
+    "postinstall": "$(npm bin)/bower install",
+    "gulp-jsmin": "$(npm bin)/gulp jsmin"
   },
   "pre-commit": [
-    "compress"
+    "gulp-jsmin"
   ],
   "repository": {
     "type": "git",

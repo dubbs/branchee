@@ -257,31 +257,47 @@
   background: #f3f3f3; }
 .branchee-theme-dark-rainbow .branchee-menu-item-active {
   font-weight: bold; }
-.branchee-theme-dark-rainbow .branchee-menu-pane a {
-  background: #3E3E40;
+.branchee-theme-dark-rainbow.branchee-toggle-menu span {
+  background: #0081BF;
   color: white; }
+.branchee-theme-dark-rainbow.branchee-toggle-menu.branchee-open span {
+  background-color: #3E3E40; }
+.branchee-theme-dark-rainbow .branchee-menu-pane a {
+  background-color: #BBBBBD; }
 .branchee-theme-dark-rainbow .branchee-pane-target {
   background: none; }
-.branchee-theme-dark-rainbow li.branchee-section--1 .branchee-pane-target,
-.branchee-theme-dark-rainbow .branchee-section--1 .branchee-back a,
-.branchee-theme-dark-rainbow .branchee-section--1 .branchee-back span {
-  background-color: #7D4296; }
-.branchee-theme-dark-rainbow li.branchee-section--2 .branchee-pane-target,
-.branchee-theme-dark-rainbow .branchee-section--2 .branchee-back a,
-.branchee-theme-dark-rainbow .branchee-section--2 .branchee-back span {
-  background-color: #F38230; }
-.branchee-theme-dark-rainbow li.branchee-section--3 .branchee-pane-target,
-.branchee-theme-dark-rainbow .branchee-section--3 .branchee-back a,
-.branchee-theme-dark-rainbow .branchee-section--3 .branchee-back span {
-  background-color: #E9178B; }
-.branchee-theme-dark-rainbow li.branchee-section--4 .branchee-pane-target,
-.branchee-theme-dark-rainbow .branchee-section--4 .branchee-back a,
-.branchee-theme-dark-rainbow .branchee-section--4 .branchee-back span {
-  background-color: #6EB846; }
-.branchee-theme-dark-rainbow li.branchee-section--5 .branchee-pane-target,
-.branchee-theme-dark-rainbow .branchee-section--5 .branchee-back a,
-.branchee-theme-dark-rainbow .branchee-section--5 .branchee-back span {
-  background-color: #4E92DF; }
+.branchee-theme-dark-rainbow ul.branchee-section li {
+  border-top-color: #3E3E40; }
+.branchee-theme-dark-rainbow li.branchee-section a,
+.branchee-theme-dark-rainbow a.branchee-menu-item-active {
+  background-color: #3E3E40;
+  font-weight: normal;
+  color: white; }
+.branchee-theme-dark-rainbow .branchee-menu-pane li.branchee-section--1 .branchee-pane-target,
+.branchee-theme-dark-rainbow .branchee-menu-pane ul.branchee-section--1 .branchee-back a,
+.branchee-theme-dark-rainbow .branchee-menu-pane ul.branchee-section--1 .branchee-back span {
+  background-color: #7D4296;
+  color: white; }
+.branchee-theme-dark-rainbow .branchee-menu-pane li.branchee-section--2 .branchee-pane-target,
+.branchee-theme-dark-rainbow .branchee-menu-pane ul.branchee-section--2 .branchee-back a,
+.branchee-theme-dark-rainbow .branchee-menu-pane ul.branchee-section--2 .branchee-back span {
+  background-color: #F38230;
+  color: white; }
+.branchee-theme-dark-rainbow .branchee-menu-pane li.branchee-section--3 .branchee-pane-target,
+.branchee-theme-dark-rainbow .branchee-menu-pane ul.branchee-section--3 .branchee-back a,
+.branchee-theme-dark-rainbow .branchee-menu-pane ul.branchee-section--3 .branchee-back span {
+  background-color: #E9178B;
+  color: white; }
+.branchee-theme-dark-rainbow .branchee-menu-pane li.branchee-section--4 .branchee-pane-target,
+.branchee-theme-dark-rainbow .branchee-menu-pane ul.branchee-section--4 .branchee-back a,
+.branchee-theme-dark-rainbow .branchee-menu-pane ul.branchee-section--4 .branchee-back span {
+  background-color: #6EB846;
+  color: white; }
+.branchee-theme-dark-rainbow .branchee-menu-pane li.branchee-section--5 .branchee-pane-target,
+.branchee-theme-dark-rainbow .branchee-menu-pane ul.branchee-section--5 .branchee-back a,
+.branchee-theme-dark-rainbow .branchee-menu-pane ul.branchee-section--5 .branchee-back span {
+  background-color: #4E92DF;
+  color: white; }
 
 .branchee-theme-deep-blue ul {
   margin: 0;
