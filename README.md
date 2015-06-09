@@ -3,6 +3,5 @@ Branchee is a lightweight mobile navigation plugin with built in transitions.  T
 
 ## Development
 
-To compile the stylesheets:
-
-	sass --watch scss/branchee.scss:scss/branchee.css
+	npm install
+	npm run watch-scss	
