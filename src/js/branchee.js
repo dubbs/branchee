@@ -1,6 +1,6 @@
 /**
  * branchee.js
- * version: 1.1.5
+ * version: 1.1.6
  * author: dubbs
  * license: MIT
  */
@@ -16,7 +16,10 @@
     this.$panes = null;
 
     this.$el.on('click', '.'+this.options.classMenuPaneTarget, $.proxy(this._handleClick, this));
-    $(document).on('click', '.'+this.options.classToggleMenu, $.proxy(this._handleToggle, this));
+
+    if (this.options.handleToggle) {
+      $(document).on('click', '.'+this.options.classToggleMenu, $.proxy(this._handleToggle, this));
+    }
   }
 
   /********
@@ -211,11 +214,15 @@
       var branchee = new Branchee(this, config);
       branchee.init();
 
+      // store instance on dom element
+      $(this).data('branchee', branchee);
+
     });
 
   };
 
   $.fn.branchee.defaults = {
+    handleToggle:              true,
     classBackLink:             'branchee-back',
     classMenuItemActive:       'branchee-menu-item-active',
     classMenuPaneActive:       'branchee-menu-pane-active',
