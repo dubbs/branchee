@@ -46,7 +46,7 @@
     };
 
     /**
-     *
+     * Handle menu toggle click
      */
     var handleToggle = function (e) {
       e.preventDefault();
@@ -56,7 +56,7 @@
     };
 
     /**
-     *
+     * Handle pane target click
      */
     var handleClick = function (e) {
 
@@ -163,6 +163,7 @@
      *
      */
     var createPane = function (index, element) {
+
       // copy ul and remove children
       var $ul = $(element).clone();
       $ul.find('ul').remove();
@@ -173,7 +174,6 @@
 
       // remove existing pane id on ul and wrap
       $ul.removeAttr(options.dataPaneId).appendTo($menu).wrap($wrapper);
-
     };
 
     /**
@@ -186,7 +186,7 @@
     };
 
     /**
-     *
+     * Remove original menu from DOM
      */
     var removeOriginalMenu = function () {
       $menu.find('> ul').remove();
@@ -214,12 +214,12 @@
 
 
     /**
-     *
+     * Bind pane target click event
      */
     $el.on('click', '.'+options.classMenuPaneTarget, handleClick);
 
     /**
-     *
+     * Bind menu toggle click event
      */
     if (options.handleToggle) {
       $(document).on('click', '.'+options.classToggleMenu, handleToggle);
