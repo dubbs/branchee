@@ -1,6 +1,6 @@
 {
   "name": "branchee",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "Branchee is a lightweight mobile navigation plugin with built in transitions",
   "main": "src/branchee.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "min-js": "$(npm bin)/uglifyjs --compress --mangle --output dist/branchee.min.js -- src/js/branchee.js",
     "min-css": "$(npm bin)/node-sass --output-style compressed src/scss/branchee.scss --output dist && cp -a dist/branchee.css dist/branchee.min.css",
     "watch-scss": "$(npm bin)/node-sass --recursive --watch --output-style expanded src/scss/branchee.scss --output src/scss",
-    "add-files": "git add ."
+    "add-files": "git add .",
+    "server": "python -m SimpleHTTPServer 8000"
   },
   "pre-commit": [
     "min-js",

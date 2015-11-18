@@ -192,6 +192,26 @@
       $menu.find('> ul').remove();
     };
 
+    var setActivePaneByHref = function (href) {
+
+      // test for link as parent
+      var $backLink = $el.find('.'+options.classBackLink+' [href="' + href + '"]');
+      if ($backLink.length) {
+        var $target = $backLink.closest('.'+options.classMenuPane);
+        setActivePane($target);
+        return;
+      }
+
+      // test for link as leaf
+      var $link = $el.find('[href="' + href + '"]');
+      if ($link.length) {
+        var $target = $link.closest('.'+options.classMenuPane);
+        setActivePane($target);
+        return;
+      }
+
+    };
+
     /**
      *
      */
@@ -231,7 +251,8 @@
     return {
       init: init,
       toggleOpen: toggleOpen,
-      clearTransitions: clearTransitions
+      clearTransitions: clearTransitions,
+      setActivePaneByHref: setActivePaneByHref
     };
 
   }

@@ -17,7 +17,7 @@
 				<ul>
 					<li><a href="#">The Arts</a>
 						<ul>
-							<li><a href="#">Literature</a></li>
+							<li><a href="/literature">Literature</a></li>
 							<li><a href="#">Visual Arts</a></li>
 							<li><a href="#">Performing Arts</a></li>
 						</ul>
@@ -91,6 +91,7 @@
 			$('#menu').clone().show().appendTo('#menu-1 .branchee-menu');
 			$('#menu-1').branchee({
 				onAfterInit: function () {
+					this.setActivePaneByHref('/literature');
 					this.toggleOpen();
 				}
 			});
@@ -163,7 +164,7 @@
 			<script>
 			$('#menu').clone().show().appendTo('#menu-5 .branchee-menu');
 			$('#menu-5').branchee({
-				onAfterInit: function () {
+        onAfterInit: function () {
 					this.toggleOpen();
 				}
 			});
