@@ -192,6 +192,9 @@
       $menu.find('> ul').remove();
     };
 
+    /**
+     *
+     */
     var setActivePaneByHref = function (href) {
 
       // test for link as parent
@@ -230,6 +233,7 @@
 
       options.onAfterInit.call(this);
 
+      return this;
     };
 
 

@@ -1,6 +1,6 @@
 {
   "name": "branchee",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Branchee is a lightweight mobile navigation plugin with built in transitions",
   "main": "src/branchee.js",
   "scripts": {
