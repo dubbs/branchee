@@ -1,6 +1,6 @@
 {
   "name": "branchee",
-  "main": "src/branchee.js",
+  "main": "src/js/branchee.js",
   "version": "1.2.1",
   "homepage": "https://github.com/dubbs/branchee",
   "authors": [
