@@ -27,19 +27,31 @@
   left: 0;
 }
 
-.branchee-toggle-menu span:before {
+.branchee-open .branchee-toggle-menu-icon-open {
+  display: none !important;
+}
+
+.branchee-toggle-menu-icon-close {
+  display: none !important;
+}
+
+.branchee-open .branchee-toggle-menu-icon-close {
+  display: inline-block !important;
+}
+
+.branchee-icon-open:before {
   content: "\2630";
 }
 
-.branchee-open.branchee-toggle-menu span:before {
+.branchee-icon-close:before {
   content: "✖";
 }
 
-.branchee-pane-target:after {
+.branchee-icon-arrow-right:after {
   content: "\203a";
 }
 
-.branchee-back .branchee-pane-target:after {
+.branchee-icon-arrow-left:after {
   content: "\2039";
 }
 
@@ -109,7 +121,7 @@
 .branchee-theme-minimal.branchee-toggle-menu {
   position: relative;
   display: block;
-  padding: 0.3em 0.3em 0.3em 2.4em;
+  padding: .3em .3em .3em 2.4em;
   text-decoration: none;
   color: black;
 }
@@ -189,7 +201,7 @@
 .branchee-theme-rainbow.branchee-toggle-menu {
   position: relative;
   display: block;
-  padding: 0.3em 0.3em 0.3em 2.4em;
+  padding: .3em .3em .3em 2.4em;
   text-decoration: none;
   color: black;
 }
@@ -345,7 +357,7 @@
 .branchee-theme-dark-rainbow.branchee-toggle-menu {
   position: relative;
   display: block;
-  padding: 0.3em 0.3em 0.3em 2.4em;
+  padding: .3em .3em .3em 2.4em;
   text-decoration: none;
   color: black;
 }
@@ -488,7 +500,7 @@
 .branchee-theme-deep-blue.branchee-toggle-menu {
   position: relative;
   display: block;
-  padding: 0.3em 0.3em 0.3em 2.4em;
+  padding: .3em .3em .3em 2.4em;
   text-decoration: none;
   color: black;
 }
@@ -659,31 +671,4 @@
 .branchee-transition-enterleft {
   -webkit-animation-name: enterleft;
   animation-name: enterleft;
-}
-
-.branchee-pane-target:after, .branchee-toggle-menu span:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.branchee-pane-target:after {
-  font-size: .7em;
-  content: "\f054";
-}
-
-.branchee-back .branchee-pane-target:after {
-  content: "\f053";
-}
-
-.branchee-toggle-menu span:before {
-  font-size: .8em;
-  content: "\f0c9";
-}
-
-.branchee-open.branchee-toggle-menu span:before {
-  content: "\f00d";
 }

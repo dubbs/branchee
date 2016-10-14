@@ -10,7 +10,8 @@ body {
 #example-2,
 #example-3,
 #example-4, 
-#example-5 {
+#example-5,
+#example-6 {
 	float: left;
 	width: 300px;
 }
