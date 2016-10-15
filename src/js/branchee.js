@@ -61,25 +61,25 @@
     var handleClick = function (e) {
 
       e.preventDefault();
-      var $target = $(e.target);
+      var $target = $(e.currentTarget);
       // go up to menu pane
-      var $paneCurrent = $target.closest('.'+options.classMenuPane);
+      var $menuPaneSrc = $target.closest('.'+options.classMenuPane);
 
-      var $paneTarget = $el.find('['+options.dataPaneId+'="' + $target.data(options.classMenuPaneTarget) + '"]');
+      var $menuPaneDest = $el.find('['+options.dataPaneId+'="' + $target.data(options.classMenuPaneTarget) + '"]');
 
       clearTransitions();
 
       if($target.closest('.'+options.classBackLink).length !== 0) {
         // back
-        $paneCurrent.addClass(options.classTransitionExitRight);
-        $paneTarget.addClass(options.classTransitionEnterLeft);
+        $menuPaneSrc.addClass(options.classTransitionExitRight);
+        $menuPaneDest.addClass(options.classTransitionEnterLeft);
       } else {
         // forward
-        $paneCurrent.addClass(options.classTransitionExitLeft);
-        $paneTarget.addClass(options.classTransitionEnterRight);
+        $menuPaneSrc.addClass(options.classTransitionExitLeft);
+        $menuPaneDest.addClass(options.classTransitionEnterRight);
       }
 
-      setActivePane($paneTarget);
+      setActivePane($menuPaneDest);
 
     };
 
@@ -117,8 +117,14 @@
      */
     var appendPaneTargets = function (index, element) {
       var paneTargetId = generateId();
-      $(element).siblings('ul').attr(options.dataPaneId, paneTargetId);
-      $(element).append('<span class="'+options.classMenuPaneTarget+'" '+options.dataPaneTarget+'="'+paneTargetId+'"></span>');
+      // Add target id to section
+      var $section = $(element).siblings('ul');
+      $section.attr(options.dataPaneId, paneTargetId);
+      // add target to element
+      var $templatePaneTarget = $('<span></span>').append(options.templateIconArrowRight);
+      $templatePaneTarget.addClass(options.classMenuPaneTarget);
+      $templatePaneTarget.attr(options.dataPaneTarget, paneTargetId);
+      $(element).append($templatePaneTarget);
     };
 
     /**
@@ -136,7 +142,19 @@
     var addMenuToggleTarget = function () {
       var id = $el.attr('id');
       var $toggle = $('.branchee-toggle-menu[href="#'+id+'"]');
-      $toggle.prepend('<span class="branchee-toggle-menu-icon"></span>');
+
+      var $wrapperIconOpen = $('<span class="branchee-toggle-menu-icon-open"></span>')
+        .append(options.templateIconOpen);
+
+      var $wrapperIconClose = $('<span class="branchee-toggle-menu-icon-close"></span>')
+        .append(options.templateIconClose);
+
+      var $wrapperToggleIcon = $('<span></span>')
+        .addClass('branchee-toggle-menu-icon')
+        .append($wrapperIconOpen)
+        .append($wrapperIconClose);
+
+      $toggle.prepend($wrapperToggleIcon);
     };
 
     /**
@@ -146,7 +164,10 @@
       var $a = $(element).siblings('a').clone();
       // update pane target
       var paneId = $(element).parents('ul').attr(options.dataPaneId);
-      $a.children('span').attr(options.dataPaneTarget, paneId);
+      $a.children('span')
+        .attr(options.dataPaneTarget, paneId)
+        .html(options.templateIconArrowLeft)
+        ;
       // add as first child to pane
       $a.prependTo($(element)).wrap("<li class='"+options.classBackLink+"'></li>");
     };
@@ -280,7 +301,7 @@
    * jQuery defauls
    */
   $.fn.branchee.defaults = {
-    handleToggle:              true,
+    handleToggle:               true,
     classBackLink:             'branchee-back',
     classMenuItemActive:       'branchee-menu-item-active',
     classMenuPaneActive:       'branchee-menu-pane-active',
@@ -297,6 +318,10 @@
     classTransitionEnterRight: 'branchee-transition-enterright',
     classTransitionExitLeft:   'branchee-transition-exitleft',
     classTransitionExitRight:  'branchee-transition-exitright',
+    templateIconClose:         '<span class="branchee-icon-close"></span>',
+    templateIconOpen:          '<span class="branchee-icon-open"></span>',
+    templateIconArrowRight:    '<span class="branchee-icon-arrow-right"></span>',
+    templateIconArrowLeft:     '<span class="branchee-icon-arrow-left"></span>',
     dataPaneId:                'data-branchee-pane-id',
     dataPaneTarget:            'data-branchee-pane-target',
     onBeforeInit: function () {},

@@ -19,17 +19,33 @@
 	left: 0;
 }
 
-.branchee-toggle-menu span:before {
-	content: "\2630";
+.branchee-toggle-menu-icon-open {
+	.branchee-open & {
+		display: none !important;
+	}
 }
-.branchee-open.branchee-toggle-menu  span:before {
-	content: "✖";
+.branchee-toggle-menu-icon-close {
+	display: none !important;
+	.branchee-open & {
+		display: inline-block !important;
+	}
 }
 
-.branchee-pane-target:after {
+.branchee-icon-open {
+	&:before {
+		content: "\2630";
+	}
+}
+.branchee-icon-close {
+	&:before {
+		content: "✖";
+	}
+}
+
+.branchee-icon-arrow-right:after {
 	content: "\203a";
 }
-.branchee-back .branchee-pane-target:after {
+.branchee-icon-arrow-left:after {
 	content: "\2039";
 }
 
