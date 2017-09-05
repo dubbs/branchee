@@ -1,10 +1,9 @@
 {
   "name": "branchee",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Branchee is a lightweight mobile navigation plugin with built in transitions",
   "main": "src/branchee.js",
   "scripts": {
-    "postinstall": "$(npm bin)/bower install",
     "min-js": "$(npm bin)/uglifyjs --compress --mangle --output dist/branchee.min.js -- src/js/branchee.js",
     "min-css": "$(npm bin)/node-sass --output-style compressed src/scss/branchee.scss --output dist && cp -a dist/branchee.css dist/branchee.min.css",
     "watch-scss": "$(npm bin)/node-sass --recursive --watch --output-style expanded src/scss/branchee.scss --output src/scss",
